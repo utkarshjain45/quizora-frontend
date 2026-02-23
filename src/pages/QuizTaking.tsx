@@ -84,7 +84,7 @@ export function QuizTaking() {
 
     setSubmitting(true);
     try {
-      const response = await submitQuiz({
+      await submitQuiz({
         quizCode: quiz.code,
         answers,
       });

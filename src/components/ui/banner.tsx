@@ -1,5 +1,5 @@
 import { Button } from "./button";
-import { ArrowRight, ShoppingBag } from "lucide-react";
+import { ArrowRight} from "lucide-react";
 
 interface BannerProps {
   title: string;
@@ -16,7 +16,6 @@ export function Banner({
   subtitle,
   description,
   buttonText,
-  buttonLink,
   backgroundImage,
   overlay = true,
 }: BannerProps) {
@@ -51,7 +50,6 @@ export function Banner({
 export function CategoryBanner({
   title,
   image,
-  link,
 }: {
   title: string;
   image: string;

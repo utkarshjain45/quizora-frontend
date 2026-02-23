@@ -67,7 +67,7 @@ export function AdminCreateQuiz() {
   const updateQuestion = (index: number, field: keyof CreateQuizQuestionRequest, value: unknown) => {
     setQuestions((q) => {
       const next = [...q];
-      (next[index] as Record<string, unknown>)[field] = value;
+      (next[index] as unknown as Record<string, unknown>)[field] = value;
       return next;
     });
   };

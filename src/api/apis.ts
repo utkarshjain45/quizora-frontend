@@ -9,7 +9,7 @@ import type {
 } from "@/types/quiz";
 import axios from "axios";
 
-const api = axios.create({ baseURL: "http://localhost:8080" });
+const api = axios.create({ baseURL: import.meta.env.VITE_APP_API_URL });
 
 api.interceptors.request.use((config) => {
   if (config.url?.startsWith("/api/v1/auth")) {
